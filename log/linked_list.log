@@ -1,0 +1,11 @@
+2015-10-11 18:04:26,400  INFO main(43): [5, 0, 6, 1, 10, 3]
+2015-10-11 18:11:05,270  INFO main(40): processing linked list for rearranging
+2015-10-11 18:11:05,270  INFO linked_list(151): sorting linked list
+2015-10-11 18:11:05,273  INFO linked_list(186): Done with rearranging check 
+ output file at path C:\Users\E841299.GLOBAL\Documents\master\linked_list_arranger\output\output_array.json
+2015-10-11 18:11:05,273  INFO main(43): [5, 0, 6, 1, 10, 3]
+2015-10-11 18:15:23,615  INFO main(46): processing linked list for rearranging
+2015-10-11 18:15:23,618  INFO linked_list(151): sorting linked list
+2015-10-11 18:15:23,618  INFO linked_list(186): Done with rearranging check 
+ output file at path C:\Users\E841299.GLOBAL\Documents\master\linked_list_arranger\output\output_array.json
+2015-10-11 18:15:23,618  INFO main(49): [5, 0, 6, 1, 10, 3]

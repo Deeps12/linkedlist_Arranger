@@ -1,6 +1,8 @@
 import os
 import json
+import logging
 
+logger = logging.getLogger("LinkedList")
 
 class Node(object):
     '''
@@ -68,10 +70,10 @@ class LinkedList(object):
         This method will print each ele in linked list
         '''
         if self.head:
-            print(self.head.data)
+            logger.info(self.head.data)
             current_node = self.head.next_node
             while not(current_node == None):
-                print(current_node.data)
+                logger.info(current_node.data)
                 current_node = current_node.next_node
     
     def get_size(self):
@@ -146,7 +148,11 @@ class LinkedList(object):
         This will rearrange list and save it to json file 
         in output folder
         '''
+        logger.info("sorting linked list")
         self.__sort()
+        #logger.info("###printing sorted elements###")
+        #self.print_elems()
+                         
         self.size = self.get_size()
         if self.size > 2:
             (list1, list2) = self.__split_list()
@@ -154,7 +160,7 @@ class LinkedList(object):
         #list2.print_elems()
         if output_file_name:
             path = os.path.join(os.path.abspath(
-                                        os.path. os.chdir("..")),
+                                        os.path. os.chdir(".")),
                                         "output",
                                         output_file_name)
         else:
@@ -177,5 +183,6 @@ class LinkedList(object):
         with open(path, 'w') as fw:
             json.dump(data, fw)
         
-        return (list1, list2)
+        logger.info("Done with rearranging check \n output file at path " + str(path))
+        return (list1, list2, data)
         
